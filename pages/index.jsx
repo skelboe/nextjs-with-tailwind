@@ -1,12 +1,5 @@
-import Head from 'next/head'
-import '../styles/app.css'
-
 export default () => (
     <>
-        <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
-
         <div className="bg-gray-200 h-screen flex flex-row items-center justify-center">
             <div className="bg-white rounded shadow-lg px-4 py-3">
                 <img

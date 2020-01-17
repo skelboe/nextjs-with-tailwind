@@ -1,27 +1,18 @@
-const tailwindcss = require('tailwindcss')
-const postcssPresetEnv = require('postcss-preset-env')
-const purgecss = require('@fullhuman/postcss-purgecss')
-const cssnano = require('cssnano')
-
-const plugins = [tailwindcss, postcssPresetEnv]
+// Next.js 9.2 includes css built in, and we now have to specify our imports
+// like strings.
+const plugins = {
+    'postcss-import': {},
+    tailwindcss: {},
+    'postcss-preset-env': { stage: 2 },
+}
 
 // When building for production we will purge any unsued styles
 if (process.env.NODE_ENV === 'production') {
-    // Purge unused classes
-    plugins.push(
-        purgecss({
-            content: ['./pages/**/*.jsx', './components/**/*.jsx'],
-            whitelist: ['body', 'html'],
-            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-        }),
-    )
-
-    // Compress the style output
-    plugins.push(
-        cssnano({
-            preset: 'default',
-        }),
-    )
+    plugins['@fullhuman/postcss-purgecss'] = {
+        content: ['./pages/**/*.jsx', './components/**/*.jsx'],
+        whitelist: ['body', 'html'],
+        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+    }
 }
 
 module.exports = {

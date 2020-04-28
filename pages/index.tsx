@@ -1,4 +1,4 @@
-export default () => (
+export default (): React.ReactElement => (
     <>
         <div className="bg-gray-200 h-screen flex flex-row items-center justify-center">
             <div className="bg-white rounded shadow-lg px-4 py-3">

@@ -9,7 +9,7 @@ const plugins = {
 // When building for production we will purge any unsued styles
 if (process.env.NODE_ENV === 'production') {
     plugins['@fullhuman/postcss-purgecss'] = {
-        content: ['./pages/**/*.jsx', './components/**/*.jsx'],
+        content: ['./pages/**/*.{jsx,tsx}', './components/**/*.{jsx,tsx}'],
         whitelist: ['body', 'html'],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
     }

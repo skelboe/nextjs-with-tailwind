@@ -1,7 +1,12 @@
 module.exports = {
-  theme: {
-    extend: {}
-  },
-  variants: {},
-  plugins: []
+    purge: {
+        enabled: true,
+        content: ['./pages/**/*.{jsx,tsx}', './components/**/*.{jsx,tsx}'],
+        whitelist: ['body', 'html'],
+    },
+    theme: {
+        extend: {},
+    },
+    variants: {},
+    plugins: [],
 }

@@ -1,5 +1,5 @@
-export default (): React.ReactElement => (
-    <>
+export default function Index(): React.ReactElement {
+    return (
         <div className="bg-gray-200 h-screen flex flex-row items-center justify-center">
             <div className="bg-white rounded shadow-lg px-4 py-3">
                 <img
@@ -10,5 +10,5 @@ export default (): React.ReactElement => (
                 <h3>My premium project with Next.js</h3>
             </div>
         </div>
-    </>
-)
+    )
+}

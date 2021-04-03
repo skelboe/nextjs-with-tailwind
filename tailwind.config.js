@@ -4,6 +4,7 @@ module.exports = {
         content: ['./pages/**/*.{jsx,tsx}', './components/**/*.{jsx,tsx}', './lib/**/*.{jsx,tsx}'],
         whitelist: ['body', 'html'],
     },
+    darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {},
     },

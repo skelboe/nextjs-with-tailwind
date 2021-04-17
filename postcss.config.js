@@ -3,7 +3,7 @@
 module.exports = {
     plugins: {
         'postcss-import': {},
-        tailwindcss: {},
+        '@tailwindcss/jit': {},
         autoprefixer: {},
         'postcss-preset-env': { stage: 2 },
     },

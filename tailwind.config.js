@@ -1,9 +1,6 @@
 module.exports = {
-    purge: {
-        enabled: process.env.NODE_ENV == 'production',
-        content: ['./pages/**/*.{jsx,tsx}', './components/**/*.{jsx,tsx}', './lib/**/*.{jsx,tsx}'],
-        whitelist: ['body', 'html'],
-    },
+    mode: 'jit',
+    purge: ['./pages/**/*.{jsx,tsx}', './components/**/*.{jsx,tsx}', './lib/**/*.{jsx,tsx}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {},
